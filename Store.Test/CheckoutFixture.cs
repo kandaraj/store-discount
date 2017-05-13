@@ -18,6 +18,8 @@ namespace Store.Test
         [TestCase(Client.Ford, "standout", 309.99)]
         [TestCase(Client.Ford, "standout,standout,standout", 929.97)]
         [TestCase(Client.Ford, "premium,premium,premium", 1169.97)]
+        [TestCase(Client.Ford, "premium,premium,premium,premium,premium,premium", 2339.94)]
+        [TestCase(Client.Ford, "premium,premium,premium,classic,standout,premium", 2144.94)]
         public void ScanMultipleItems_TotalIsSum(Client client, string items, double total)
         {
             IPricingRules pricingRules = new PricingRulesService(client);
